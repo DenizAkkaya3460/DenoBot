@@ -59,13 +59,10 @@ YDL_OPTS = {
     'format': 'bestaudio/best',
     'noplaylist': True,
     'quiet': True,
-    'no_warnings': True,
-    'default_search': 'ytsearch',
-    'source_address': '0.0.0.0',
+    'cookiefile': 'cookies.txt',  # İŞTE KRİTİK SATIR BU!
     'nocheckcertificate': True,
-    # YouTube bot engelini aşmak için alternatif yöntem
-    'extract_flat': False,
-    'force_generic_extractor': False,
+    'default_search': 'ytsearch',
+}
 }
 
 FFMPEG_OPTS = {
@@ -167,4 +164,4 @@ if __name__ == "__main__":
     if token:
         bot.run(token)
     else:
-        print("HATA: DISCORD_TOKEN bulunamadı! Render panelinden Environment kısmına ekleyin.")
+        print("MTQ4NzQ1MTU1NjE3MjUyOTY3NA.Gy4ZA5.8IOgoxphED2fdgm8roiwXHLqbYSQTdSx9dNUxs")
