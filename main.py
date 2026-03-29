@@ -42,14 +42,22 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 cookie_path = os.path.join(base_path, 'cookies.txt')
 
 YDL_OPTS = {
-    'format': 'bestaudio/best',
+    'format': 'bestaudio/best', # En iyi sesi otomatik seçer
     'noplaylist': True,
     'quiet': True,
     'no_warnings': True,
     'default_search': 'ytsearch',
     'nocheckcertificate': True,
     'source_address': '0.0.0.0',
-    'cookiefile': cookie_path, # Çerez dosyasını burada tanımladık
+    'cookiefile': cookie_path,
+    'extract_flat': False,
+    'force_generic_extractor': False,
+    # Aşağıdaki 2 satır format hatasını çözmek için eklendi:
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
 }
 
 FFMPEG_OPTS = {
