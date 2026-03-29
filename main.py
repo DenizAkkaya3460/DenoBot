@@ -69,12 +69,14 @@ def create_progress_bar(current, total):
 FFMPEG_PATH = (
     "/nix/store/60rvdhr04h70r6dyybakaqzbwy15vwdc-replit-runtime-path/bin/ffmpeg"
 )
-YDL_OPTS = {
-    "format": "bestaudio/best",
-    "quiet": True,
-    "no_warnings": True,
-    "source_address": "0.0.0.0",
-    "forceipv4": True,
+YDL_OPTIONS = {
+    'format': 'bestaudio/best',
+    'noplaylist': True,
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0', # Render kısıtlamasını aşmaya yardımcı olabilir
+}
 }
 FFMPEG_OPTS = {
     "executable": FFMPEG_PATH,
