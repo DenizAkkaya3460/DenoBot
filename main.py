@@ -62,7 +62,7 @@ YDL_OPTS = {
     'cookiefile': 'cookies.txt',  # İŞTE KRİTİK SATIR BU!
     'nocheckcertificate': True,
     'default_search': 'ytsearch',
-}
+
 }
 
 FFMPEG_OPTS = {
